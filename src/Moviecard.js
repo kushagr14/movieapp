@@ -10,7 +10,9 @@ class Moviecard extends Component{
             plot: "Supernatural nnvommcmmcmxnwjkdb flsnflsdknc slfnfselncs lseihfklsn",
             price: 199,
             rating: 8.9,
-            stars:0
+            stars:0,
+            fav: false,
+            cart: false
         }
     }
     countStars=0;
@@ -36,6 +38,18 @@ class Moviecard extends Component{
         }
     }
 
+    favHandler = () => {
+        this.setState({
+            fav: !this.state.fav
+        })
+    }
+
+    cartHandler = () => {
+        this.setState({
+            cart: !this.state.cart
+        })
+    }
+
     render(){
         const {title, plot, price, rating, stars} = this.state;
 
@@ -58,8 +72,13 @@ class Moviecard extends Component{
                         <img src="https://t4.ftcdn.net/jpg/03/22/32/37/240_F_322323723_HJb8d1u2NuI8dMAjvC62TXbSqn63vpI3.jpg" className="str-btn" onClick={this.addStars}/>
                         <span>{stars}</span>
                     </div>
-                    <button className="favourite-btn">Favourites</button>
-                    <button className="cart-btn">Add to cart</button>
+                    {   //conditional rendering using ternary operators
+                        this.state.fav ? 
+                            <button className="unfavourite-btn" onClick={this.favHandler}>Un-Favourite</button> : 
+                            <button className="favourite-btn" onClick={this.favHandler}>Favourites</button>
+                    }
+                    <button className={this.state.cart? "unfavourite-btn" : "cart-btn"} onClick={this.cartHandler}>
+                        {this.state.cart ? "Remove From Cart" : "Add to cart"}</button>
                 </div>
                 </div>
             </div>
