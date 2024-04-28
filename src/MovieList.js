@@ -8,7 +8,8 @@ class MovieList extends Component{
         this.state={
             movies:
             [
-                {
+                {   
+                    id:1,
                     title: "The Avengers",
                     plot: "Supernatural nnvommcmmcmxnwjkdb flsnflsdknc slfnfselncs lseihfklsn",
                     poster: "https://picsum.photos/id/237/400/300",
@@ -19,6 +20,7 @@ class MovieList extends Component{
                     cart: false
                 },
                 {
+                    id:2,
                     title: "DDLJ",
                     plot: "Bollywood Love story blah blah balh blah",
                     poster: "https://picsum.photos/id/237/400/300",
@@ -29,6 +31,7 @@ class MovieList extends Component{
                     cart: false
                 },
                 {
+                    id:3,
                     title: "ZNMD",
                     plot: "Europe trip, blah blah balh, too much money, blah blah blah, live your life",
                     poster: "https://picsum.photos/id/237/400/300",
@@ -97,6 +100,7 @@ class MovieList extends Component{
                 minusStars={this.decStars}
                 favHandler={this.handleFav}
                 cartHandler={this.handleCart}
+                key= {m.id}
                 />)}
             </>
         )

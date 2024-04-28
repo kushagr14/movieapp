@@ -122,3 +122,11 @@ footer.starCount {
   text-shadow: none;
   margin: 5px;
 }
+
+.nav{
+  width: auto;
+  height: 60px;
+  background-color: rgb(70, 68, 224);
+  display: flex;
+  justify-content: space-between;
+}
