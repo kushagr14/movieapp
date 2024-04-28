@@ -1,0 +1,44 @@
+.Nav {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(170deg, #1bc059, #0d47a1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.Title {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    margin: 18px;
+}
+
+.Title:hover {
+    color: #0f1;
+}
+
+.CartContainer {
+    position: relative;
+    cursor: pointer;
+}
+
+.CartIcon {
+    width: 50%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.CartCount {
+    background: yellow;
+    border-radius: 50%;
+    padding: 4px 8px;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    font-size: 12px;
+    visibility: visible;
+}
+
+
