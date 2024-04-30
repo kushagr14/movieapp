@@ -8,7 +8,7 @@ class Navbar extends Component{
     render(){
         return(
             <>
-                <h1>Navbar</h1>
+                <h1>Navbar - Hi</h1>
                 <div className={Nav.Nav}>
                     <div className={Nav.Title}>Movie-App</div>
                     <div className={Nav.CartContainer}>
